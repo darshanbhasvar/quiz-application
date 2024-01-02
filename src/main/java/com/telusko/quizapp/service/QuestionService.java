@@ -3,6 +3,8 @@ package com.telusko.quizapp.service;
 
 import com.telusko.quizapp.Dao.QuestionDao;
 import com.telusko.quizapp.models.Question;
+import com.telusko.quizapp.models.QuestionWrapper;
+import com.telusko.quizapp.models.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,4 +44,5 @@ public class QuestionService {
         return new ResponseEntity<>("Success", HttpStatus.CREATED);
 
     }
+
 }

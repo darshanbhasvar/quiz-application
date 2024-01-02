@@ -3,6 +3,7 @@ package com.telusko.quizapp.controller;
 
 import com.telusko.quizapp.Dao.QuestionDao;
 import com.telusko.quizapp.models.Question;
+import com.telusko.quizapp.models.QuestionWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,10 @@ public class questionController {
     }
 
     @PostMapping("add")
-    public ResponseEntity<String> adQuestion(Question question){
+    public ResponseEntity<String> addQuestion(@RequestBody Question question){
+        System.out.println("adding new question"+question.getQuestionTitle());
         return questionService.addQuestion(question);
     }
+
+
 }
