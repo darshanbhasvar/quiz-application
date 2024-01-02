@@ -32,6 +32,7 @@ public class questionController {
     @PostMapping("add")
     public ResponseEntity<String> addQuestion(@RequestBody Question question){
         System.out.println("adding new question"+question.getQuestionTitle());
+        System.out.println("hello created new banch");
         return questionService.addQuestion(question);
     }
 

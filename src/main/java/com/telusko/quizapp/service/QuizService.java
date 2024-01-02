@@ -37,7 +37,6 @@ public class QuizService {
         return new ResponseEntity<>("Success", HttpStatus.CREATED);
     }
 
-
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestion(Integer id) {
         Optional<Quiz> quiz = quizDao.findById(id);
         List<Question> questionFromDb = quiz.get().getQuestions();
